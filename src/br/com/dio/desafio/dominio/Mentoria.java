@@ -7,6 +7,11 @@ public class Mentoria extends Conteudo{
     public double calcularXp() {
         return XP_PADRAO + 20d;
     }
+    /**
+     * Returns a string representation of the Mentoria object.
+     *
+     * @return a string representation of the Mentoria object
+     */
     @Override
     public String toString() {
         return "Mentoria{" +

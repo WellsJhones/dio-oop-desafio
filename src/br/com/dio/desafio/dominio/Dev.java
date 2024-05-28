@@ -63,6 +63,12 @@ public class Dev {
         this.conteudosConcluidos = conteudosConcluidos;
     }
 
+    /**
+     * Overrides the equals method to check if two Dev objects are equal.
+     *
+     * @param  o  the object to compare to
+     * @return    true if the objects are equal, false otherwise
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
