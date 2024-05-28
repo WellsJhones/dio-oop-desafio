@@ -1,43 +1,30 @@
 package br.com.dio.desafio.dominio;
+import br.com.dio.desafio.dominio.Curso;
+import br.com.dio.desafio.dominio.Mentoria;
+public class Curso extends Conteudo {
+    //metodos
 
-public class Curso {
-
-    //atributos
-    private String titulo;
-    private String descricao;
     private int cargaHoraria;
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getDescricao() + '\'' +
+                ", cargaHoraria=" + cargaHoraria +
+                '}';
+    }
+    @Override
+    public double calcularXp() {
+        return XP_PADRAO * cargaHoraria;
+    }
 
-    //construtor
-    public Curso() {
-    }
-    public Curso(String titulo, String descricao, int cargaHoraria) {
-        this.titulo = titulo;
-        this.descricao = descricao;
-        this.cargaHoraria = cargaHoraria;
-    }
-    //getters e setters
-    public String getTitulo() {
-        return titulo;
-    }
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-    public String getDescricao() {
-        return descricao;
-    }
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
+
+    //getters
     public int getCargaHoraria() {
         return cargaHoraria;
     }
+    //setters
     public void setCargaHoraria(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
-    }
-
-    @Override
-    public String toString() {
-        return "Curso [cargaHoraria=" + cargaHoraria + ", descricao=" + descricao + ", titulo=" + titulo + "]";
-
     }
 }
